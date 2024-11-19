@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MeghaYadav03/greek/static/css/main.ebf67700.css",
-    "main.js": "/MeghaYadav03/greek/static/js/main.93d9dada.js",
-    "static/js/453.93ea5476.chunk.js": "/MeghaYadav03/greek/static/js/453.93ea5476.chunk.js",
-    "static/media/2339301.jpg": "/MeghaYadav03/greek/static/media/2339301.08e386fa0d5ecde1e37c.jpg",
-    "index.html": "/MeghaYadav03/greek/index.html",
-    "main.ebf67700.css.map": "/MeghaYadav03/greek/static/css/main.ebf67700.css.map",
-    "main.93d9dada.js.map": "/MeghaYadav03/greek/static/js/main.93d9dada.js.map",
-    "453.93ea5476.chunk.js.map": "/MeghaYadav03/greek/static/js/453.93ea5476.chunk.js.map"
+    "main.css": "/greek/static/css/main.54b6f211.css",
+    "main.js": "/greek/static/js/main.f67c6632.js",
+    "static/js/453.93ea5476.chunk.js": "/greek/static/js/453.93ea5476.chunk.js",
+    "static/media/2339301.jpg": "/greek/static/media/2339301.08e386fa0d5ecde1e37c.jpg",
+    "index.html": "/greek/index.html",
+    "main.54b6f211.css.map": "/greek/static/css/main.54b6f211.css.map",
+    "main.f67c6632.js.map": "/greek/static/js/main.f67c6632.js.map",
+    "453.93ea5476.chunk.js.map": "/greek/static/js/453.93ea5476.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebf67700.css",
-    "static/js/main.93d9dada.js"
+    "static/css/main.54b6f211.css",
+    "static/js/main.f67c6632.js"
   ]
 }
