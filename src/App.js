@@ -65,87 +65,87 @@ const App = () => {
 </nav>
 
 
-      {/* Hero Section */}
-      <div id="hero">
-        <ParallaxLayer
-          depth="0.10"
-          backgroundImage="https://th.bing.com/th/id/R.1cd2609efd53ca505322de046c04b489?rik=1ZxEF215f6t%2bUQ&riu=http%3a%2f%2fessentiacounselling.com%2fwp-content%2fuploads%2f2015%2f07%2fbanner-home.png&ehk=CtgNk5vrh3WGN99UxZEQ%2fFTamdk%2bO96V7doH3r2fsi4%3d&risl=&pid=ImgRaw&r=0"
+<div id="hero" style={{ position: 'relative', height: '100vh' }}>
+  
+      <ParallaxLayer depth={0.50}>
+        <img
+          src="https://th.bing.com/th/id/R.1cd2609efd53ca505322de046c04b489?rik=1ZxEF215f6t%2bUQ&riu=http%3a%2f%2fessentiacounselling.com%2fwp-content%2fuploads%2f2015%2f07%2fbanner-home.png&ehk=CtgNk5vrh3WGN99UxZEQ%2fFTamdk%2bO96V7doH3r2fsi4%3d&risl=&pid=ImgRaw&r=0"
+          alt="sky"
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: '-400px',
+            width: '100%',
+            height: 'auto',
+          }}
         />
-         <ParallaxLayer depth={0.50}>
-          <img
-            src="https://th.bing.com/th/id/R.1cd2609efd53ca505322de046c04b489?rik=1ZxEF215f6t%2bUQ&riu=http%3a%2f%2fessentiacounselling.com%2fwp-content%2fuploads%2f2015%2f07%2fbanner-home.png&ehk=CtgNk5vrh3WGN99UxZEQ%2fFTamdk%2bO96V7doH3r2fsi4%3d&risl=&pid=ImgRaw&r=0"
-            alt="sky"
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: -400,
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer depth={0.50}>
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/011/222/157/non_2x/blue-sky-with-cloud-background-nature-vertical-free-png.png"
-            alt="Cloud"
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: -400,
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </ParallaxLayer>
+      </ParallaxLayer>
+      <ParallaxLayer depth={0.50}>
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/011/222/157/non_2x/blue-sky-with-cloud-background-nature-vertical-free-png.png"
+          alt="Cloud"
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: '-400px',
+            width: '100%',
+            height: 'auto',
+          }}
+        />
+      </ParallaxLayer>
 
-        <ParallaxLayer depth={0.40}>
-          <p
-            style={{
-              position: 'absolute',
-              left: '30%',
-              bottom: '52%',
-              transform: 'translate(-50%, 50%)',
-              fontSize: '5em',
-              fontFamily: '"Playfair Display", serif',
-              fontWeight: '1000',
-              color: 'black',
-              letterSpacing: '0.05em',
-              zIndex: 10,
-              lineHeight: '1.2',
-            }}
-          >
-            Eternity in Elegance
-          </p>
-        </ParallaxLayer>
+      <ParallaxLayer depth={0.40}>
+  <p
+    style={{
+      position: 'absolute',
+      left: '27%',
+      bottom: '61%',
+      transform: 'translate(-50%, 50%)',
+      fontSize: '4.3em', // Reduced the font size
+      fontFamily: '"Playfair Display", serif', // Elegant serif font
+      fontWeight: '1000', // Bold weight for better emphasis
+      color: '#2e3d4f', // Darker grey-blue shade for more depth
+      textShadow: '1px 1px 1px rgba(0, 0, 0, 0.6)', // Slightly reduced shadow for a more subtle effect
+      letterSpacing: '0.04em', // Reduced letter spacing for a tighter appearance
+      zIndex: 10,
+      lineHeight: '1.2', // Ensures readability with better line height
+      textAlign: 'center', // Keeps the text centered
+      margin: 0,
+      padding: 0,
+      WebkitTextStroke: '0.5px black',
+    }}
+  >
+    Eternity in Elegance
+  </p>
+</ParallaxLayer>
 
-        <ParallaxLayer depth={0.30}>
-          <img
-            src="https://img1.picmix.com/output/stamp/normal/8/4/0/0/2500048_025f5.png"
-            alt="Greek Sculpture"
-            style={{
-              position: 'absolute',
-              right: -10,
-              bottom: 80,
-              width: 'auto',
-              height: '80%',
-            }}
-          />
-        </ParallaxLayer>
+      <ParallaxLayer depth={0.30}>
+        <img
+          src="https://img1.picmix.com/output/stamp/normal/8/4/0/0/2500048_025f5.png"
+          alt="Greek Sculpture"
+          style={{
+            position: 'absolute',
+            right: '-10px',
+            bottom: '180px',
+            width: 'auto',
+            height: '80%',
+          }}
+        />
+      </ParallaxLayer>
 
-        <ParallaxLayer depth={1.0}>
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/011/222/157/non_2x/blue-sky-with-cloud-background-nature-vertical-free-png.png"
-            alt="Cloud"
-            style={{
-              position: 'absolute',
-              bottom: -480,
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </ParallaxLayer>
-      </div>
-
+      <ParallaxLayer depth={1.0}>
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/011/222/157/non_2x/blue-sky-with-cloud-background-nature-vertical-free-png.png"
+          alt="Cloud"
+          style={{
+            position: 'absolute',
+            bottom: '-400px',
+            width: '100%',
+            height: 'auto',
+          }}
+        />
+      </ParallaxLayer>
+    </div>
        
 
       <section class="blog-section">

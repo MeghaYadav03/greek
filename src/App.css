@@ -54,13 +54,58 @@ p {
 }
 
 /* Media Queries */
+@media only screen and (max-width: 1024px) {
+  /* Adjusting Hero Section for smaller screens */
+  #hero {
+    height: 600px; /* Reduced height on smaller screens */
+  }
+
+  h1 {
+    font-size: 24px; /* Smaller font size for headers */
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px; /* Slightly smaller paragraph text */
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  /* Hide hero section on smaller screens */
   #hero {
     display: none;
   }
 
+  /* Ensure content is not squished on small screens */
   #content {
     padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px; /* Further adjust font size */
+    text-align: center; /* Center the heading */
+  }
+
+  p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    line-height: 140%; /* Better readability on small screens */
+  }
+
+  /* Adjust first section padding */
+  .first-section {
+    padding: 30px 0; /* Less padding for mobile */
+  }
+}
+
+/* Mobile Adjustments (Optional) */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 18px; /* Further reduce font size on very small screens */
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px; /* Ensure text fits properly on very small screens */
   }
 }
 
@@ -68,19 +113,18 @@ p {
 /* Blog Section Styling */
 .blog-section {
   position: relative;
-  padding: 100px 5%; /* Adjusted padding for better spacing */
+  padding: 100px 5%;
   background-image: url('./assets/images/2339301.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   color: #fff;
   overflow: hidden;
- 
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically align content */
-  min-height: 500px; /* Set a minimum height for the section */
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
 }
 
 /* Darker Overlay for better contrast */
@@ -105,11 +149,11 @@ p {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 1200px; /* Maximum width for the container */
-  margin: 0 auto; /* Center the blog post container */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 40px;
-  height: 500px; /* Adjust the height for better proportions */
-  width: 90%; /* Ensures the blog post container isn't too wide */
+  height: 500px;
+  width: 90%;
 }
 
 /* Hover Effect on Blog Post */
@@ -120,13 +164,13 @@ p {
 
 /* Left Column (Image Section) */
 .left-column {
-  width: 45%; /* Adjusted width */
+  width: 45%;
   padding-right: 20px;
 }
 
 .blog-image {
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Ensure the aspect ratio is maintained */
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.4s ease-in-out;
@@ -145,7 +189,7 @@ p {
   align-items: flex-start;
   padding-left: 20px;
   text-align: left;
-  width: 55%; /* Increased width for more space for the text */
+  width: 55%;
 }
 
 /* Blog Title */
@@ -186,15 +230,94 @@ p {
   margin-bottom: 15px;
 }
 
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .blog-section {
+    padding: 80px 10%;
+  }
+
+  .blog-post {
+    flex-direction: column; /* Stack the columns */
+    padding: 30px;
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .left-column {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .right-column {
+    width: 100%;
+    padding-left: 0;
+    text-align: center; /* Center the text for smaller screens */
+  }
+
+  .blog-title {
+    font-size: 28px; /* Adjust title font size */
+    text-align: center; /* Center the title */
+  }
+
+  .blog-content {
+    font-size: 16px; /* Adjust content font size */
+    text-align: left; /* Restore left alignment */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-section {
+    padding: 60px 5%; /* Reduce padding for smaller screens */
+  }
+
+  .blog-post {
+    padding: 20px;
+    height: auto;
+  }
+
+  .left-column {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .right-column {
+    width: 100%;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .blog-title {
+    font-size: 24px; /* Further reduce font size for small screens */
+  }
+
+  .blog-content {
+    font-size: 14px; /* Smaller content font size */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .blog-section {
+    padding: 40px 5%; /* Further reduce padding for very small screens */
+  }
+
+  .blog-title {
+    font-size: 20px; /* Smaller title font size */
+  }
+
+  .blog-content {
+    font-size: 12px; /* Further reduce content font size */
+  }
+}
+
+
 
 
 /* Architecture Section */
 .architecture-section {
   position: relative;
   height: 100vh; /* Full height */
-  overflow: hidden; /* Prevents overflow from video */
-  border-top: 20px solid #000; /* Thick black border on top */
-  border-bottom: 20px solid #000; /* Thick black border on bottom */
+  overflow: hidden;
+  border-top: 20px solid #000;
+  border-bottom: 20px solid #000;
 }
 
 /* Background Video */
@@ -210,7 +333,7 @@ p {
 .background-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire section */
+  object-fit: cover;
 }
 
 /* Overlay Content */
@@ -243,7 +366,52 @@ p {
   margin: 0 auto;
 }
 
-/* Ending Section Styles */
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .section-heading {
+    font-size: 3em; /* Reduce font size for smaller screens */
+  }
+
+  .section-description {
+    font-size: 1.2em; /* Slightly smaller description text */
+    max-width: 500px; /* Reduce max width for better fitting */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-heading {
+    font-size: 2.5em; /* Further reduce heading font size */
+  }
+
+  .section-description {
+    font-size: 1.1em; /* Smaller description text */
+    max-width: 400px; /* Make description text fit better */
+  }
+
+  /* Adjust video container height for smaller screens */
+  .video-container {
+    height: 80vh; /* Reduce video height on small screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-heading {
+    font-size: 2em; /* Further reduce heading font size */
+  }
+
+  .section-description {
+    font-size: 1em; /* Reduce font size further for mobile screens */
+    max-width: 350px; /* Further reduce description width */
+  }
+
+  /* Adjust video container height for mobile screens */
+  .video-container {
+    height: 70vh; /* Even smaller video height on very small screens */
+  }
+}
+
+
+
 /* General body and layout */
 body, html {
   height: 100%; /* Full height */
@@ -259,14 +427,14 @@ body, html {
 
 /* Ending Section Styling */
 .ending-section {
-  background-image: url('./assets/images/2339301.jpg'); /* Add your image path here */
-  background-size: cover; /* Ensures the image covers the section */
-  background-position: center center; /* Centers the image */
-  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-image: url('./assets/images/2339301.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   color: #f5f5f5;
   text-align: center;
   padding: 60px 20px;
-  position: relative; /* Ensure overlay can sit on top */
+  position: relative;
 }
 
 /* Darker overlay for text contrast */
@@ -277,7 +445,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -291,14 +459,14 @@ body, html {
   font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adding text shadow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .ending-description {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Call to Action Button */
@@ -310,24 +478,24 @@ body, html {
   font-size: 1.1rem;
   font-family: 'Playfair Display', serif;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
-  border-radius: 30px; /* Rounded button corners */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 30px;
 }
 
 .cta-button:hover {
   background-color: #8e8276;
   color: #fff;
-  transform: translateY(-2px); /* Subtle hover lift */
+  transform: translateY(-2px);
 }
 
 /* Footer Styling */
 .footer {
   font-size: 1rem;
   color: #ccc;
-  background-color: #1a1a1a; /* Darker footer background */
+  background-color: #1a1a1a;
   padding: 20px 0;
   text-align: center;
-  border-top: 5px solid #333; /* Sleek dark border on top */
+  border-top: 5px solid #333;
 }
 
 .footer p {
@@ -338,17 +506,17 @@ body, html {
   color: #a49d93;
   text-decoration: none;
   margin: 0 10px;
-  font-weight: bold; /* Make links bold for visibility */
+  font-weight: bold;
 }
 
 .footer a:hover {
   color: #f5f5f5;
   text-decoration: underline;
-  transform: scale(1.05); /* Slight zoom on hover for links */
+  transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
-/*Navbar*/
+/* Navbar */
 .thin-navbar {
   position: fixed;
   top: 0;
@@ -388,7 +556,7 @@ body, html {
 }
 
 .navbar-links li {
-  font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -404,7 +572,7 @@ body, html {
 }
 
 .navbar-links a:hover {
-  color: #a49d93; /* Rustic highlight color */
+  color: #a49d93;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -417,4 +585,43 @@ body, html {
   .navbar-logo {
     font-size: 1.4rem;
   }
+
+  /* Ending Section Adjustments */
+  .ending-title {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+
+  .ending-description {
+    font-size: 1rem; /* Slightly smaller description font size */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Adjust button size */
+    font-size: 1rem;
+  }
+
+  /* Adjust footer padding */
+  .footer {
+    padding: 10px 0;
+  }
 }
+
+@media (max-width: 480px) {
+  .ending-title {
+    font-size: 1.8rem; /* Further reduce title font size on very small screens */
+  }
+
+  .ending-description {
+    font-size: 0.9rem; /* Further reduce description font size */
+  }
+
+  .cta-button {
+    padding: 8px 15px;
+    font-size: 0.9rem; /* Smaller button text on mobile */
+  }
+
+  .footer {
+    padding: 8px 0; /* Reduce footer padding */
+  }
+}
+
