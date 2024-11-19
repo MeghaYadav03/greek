@@ -101,9 +101,9 @@ const App = () => {
       left: '27%',
       bottom: '61%',
       transform: 'translate(-50%, 50%)',
-      fontSize: '4.3em', // Reduced the font size
+      fontSize: '4.5em', // Reduced the font size
       fontFamily: '"Playfair Display", serif', // Elegant serif font
-      fontWeight: '1000', // Bold weight for better emphasis
+      fontWeight: '1200', // Bold weight for better emphasis
       color: '#2e3d4f', // Darker grey-blue shade for more depth
       textShadow: '1px 1px 1px rgba(0, 0, 0, 0.6)', // Slightly reduced shadow for a more subtle effect
       letterSpacing: '0.04em', // Reduced letter spacing for a tighter appearance
@@ -112,7 +112,7 @@ const App = () => {
       textAlign: 'center', // Keeps the text centered
       margin: 0,
       padding: 0,
-      WebkitTextStroke: '0.5px black',
+      WebkitTextStroke: '0.1px white',
     }}
   >
     Eternity in Elegance
