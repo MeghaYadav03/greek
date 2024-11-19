@@ -63,23 +63,27 @@ p {
     padding: 20px;
   }
 }
-/* Blog Section */
-/* Blog Section Styling */
+
+  
 /* Blog Section Styling */
 .blog-section {
   position: relative;
-  padding: 120px 8%; /* Increased padding for better spacing */
-  background-image: url('https://images.prismic.io/purcell/ODk3NzcxNTktYjBkYy00OWQxLTlkYTAtNjhlYWUyNTliMDg1_nhm-central-hall-2.jpg?auto=compress,format&rect=545,0,681,1181&w=1536&h=5200');
-  background-size: cover; /* Ensures the image covers the section, but doesn't distort */
-  background-position: center center; /* Focus on the center of the image */
-  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  padding: 100px 5%; /* Adjusted padding for better spacing */
+  background-image: url('./assets/images/2339301.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   color: #fff;
   overflow: hidden;
-  border-radius:0px ; /* Softer rounded corners */
+ 
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically align content */
+  min-height: 500px; /* Set a minimum height for the section */
 }
 
-/* Darker overlay for the background */
+/* Darker Overlay for better contrast */
 .blog-section::after {
   content: '';
   position: absolute;
@@ -87,163 +91,110 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
-/* Blog Post Styling */
+/* Blog Post Container */
 .blog-post {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 50px;
-  background-color: rgba(22, 16, 16, 0.9); /* Slight transparency for a layered effect */
-  border-radius: px;
+  align-items: center;
+  background-color: rgba(36, 34, 34, 0.85);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  max-width: 1200px; /* Limit the width of the blog post */
-  margin: 0 auto; /* Center the blog post */
-  padding: 20px; /* Add padding to ensure no image or content is cramped */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1200px; /* Maximum width for the container */
+  margin: 0 auto; /* Center the blog post container */
+  padding: 40px;
+  height: 500px; /* Adjust the height for better proportions */
+  width: 90%; /* Ensures the blog post container isn't too wide */
 }
 
-/* Blog Image */
+/* Hover Effect on Blog Post */
+.blog-post:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Left Column (Image Section) */
+.left-column {
+  width: 45%; /* Adjusted width */
+  padding-right: 20px;
+}
+
 .blog-image {
-  width: 100%;
-  height: auto; /* Keep the image's natural height */
-  max-height: 350px; /* Set a fixed max-height for image to ensure proportionality */
-  object-fit: cover; /* Ensure the image covers the area */
-  border-radius: 15px; /* Rounded corners */
-  transition: transform 0.4s ease-in-out; /* Smooth transition for hover effects */
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Ensure the aspect ratio is maintained */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
 }
 
 /* Hover Effect on Image */
 .blog-post:hover .blog-image {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
 
-/* Right Column Styling */
+/* Right Column (Text Section) */
 .right-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 20px; /* Less padding to reduce space */
-  position: relative;
-  max-width: 55%; /* Limit width of right column */
-  overflow: hidden;
-}
-
-/* Left Column */
-.left-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  max-width: 45%; /* Limit width of the left column */
+  padding-left: 20px;
+  text-align: left;
+  width: 55%; /* Increased width for more space for the text */
 }
 
 /* Blog Title */
-.right-column .blog-title {
-  font-size: 40px;
-  color: #fff;
+.blog-title {
+  font-size: 36px;
+  color: #ffdd91;
   font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
   text-transform: uppercase;
-  text-align: left;
   line-height: 1.3;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease;
 }
 
 .blog-title:hover {
-  color: #f0a500;
+  color: #f4a261;
 }
 
 /* Blog Content */
 .blog-content {
   font-size: 18px;
-  color: #f1e0c6;
   line-height: 1.7;
-  font-family: 'Playfair Display', serif;
+  color: #e8e2d8;
+  font-family: 'Inter', sans-serif;
   text-align: justify;
-  max-width: 90%;
-  transition: color 0.3s ease-in-out;
+  margin-top: 10px;
+  transition: color 0.3s ease;
 }
 
+/* Hover Effect on Blog Content */
 .blog-post:hover .blog-content {
-  color: #fff;
+  color: #ffffff;
 }
 
-/* Add subtle animations to the blog title and content */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Adding More Text */
+.blog-content p {
+  margin-bottom: 15px;
 }
 
-.blog-title, .blog-content {
-  animation: fadeInUp 1s ease-out forwards;
-}
 
-.blog-post:nth-child(odd) .blog-title {
-  animation-delay: 0.3s;
-}
 
-.blog-post:nth-child(even) .blog-title {
-  animation-delay: 0.5s;
-}
-
-.blog-post:nth-child(odd) .blog-content {
-  animation-delay: 0.6s;
-}
-
-.blog-post:nth-child(even) .blog-content {
-  animation-delay: 0.8s;
-}
-
-/* Hover effect on the right column */
-.blog-post:hover .right-column {
-  transform: translateX(10px);
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-  .blog-section {
-    padding: 80px 5%;
-  }
-
-  .blog-post {
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-
-  .left-column, .right-column {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .blog-title {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  .blog-content {
-    font-size: 18px;
-  }
-}
 /* Architecture Section */
 .architecture-section {
   position: relative;
   height: 100vh; /* Full height */
   overflow: hidden; /* Prevents overflow from video */
+  border-top: 20px solid #000; /* Thick black border on top */
+  border-bottom: 20px solid #000; /* Thick black border on bottom */
 }
 
 /* Background Video */
@@ -290,4 +241,180 @@ p {
   line-height: 1.5;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Ending Section Styles */
+/* General body and layout */
+body, html {
+  height: 100%; /* Full height */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+}
+
+.main-content {
+  flex: 1; /* Ensures content grows to take available space */
+}
+
+/* Ending Section Styling */
+.ending-section {
+  background-image: url('./assets/images/2339301.jpg'); /* Add your image path here */
+  background-size: cover; /* Ensures the image covers the section */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  color: #f5f5f5;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative; /* Ensure overlay can sit on top */
+}
+
+/* Darker overlay for text contrast */
+.ending-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+  z-index: -1;
+}
+
+.ending-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.ending-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adding text shadow */
+}
+
+.ending-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* Call to Action Button */
+.cta-button {
+  background-color: #a49d93;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+  border-radius: 30px; /* Rounded button corners */
+}
+
+.cta-button:hover {
+  background-color: #8e8276;
+  color: #fff;
+  transform: translateY(-2px); /* Subtle hover lift */
+}
+
+/* Footer Styling */
+.footer {
+  font-size: 1rem;
+  color: #ccc;
+  background-color: #1a1a1a; /* Darker footer background */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 5px solid #333; /* Sleek dark border on top */
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #a49d93;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold; /* Make links bold for visibility */
+}
+
+.footer a:hover {
+  color: #f5f5f5;
+  text-decoration: underline;
+  transform: scale(1.05); /* Slight zoom on hover for links */
+  transition: transform 0.3s ease;
+}
+
+/*Navbar*/
+.thin-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fdfdfd;
+  z-index: 1000;
+  padding: 1px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thin-navbar:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-family: 'Playfair Display', serif; 
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.navbar-links li {
+  font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fdfdfd;
+  padding: 3px 10px;
+  border-radius: 3px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #a49d93; /* Rustic highlight color */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-logo {
+    font-size: 1.4rem;
+  }
 }

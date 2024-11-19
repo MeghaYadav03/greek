@@ -51,13 +51,39 @@ const App = () => {
 
   return (
     <>
+   <nav className="thin-navbar">
+  <div className="navbar-container">
+    <h1 className="navbar-logo">EternaMuse</h1>
+    <ul className="navbar-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
       {/* Hero Section */}
       <div id="hero">
         <ParallaxLayer
           depth="0.10"
-          backgroundImage="https://everytexture.com/wp-content/uploads/2020/12/everytexture.com-stock-nature-00012.jpg"
+          backgroundImage="https://th.bing.com/th/id/R.1cd2609efd53ca505322de046c04b489?rik=1ZxEF215f6t%2bUQ&riu=http%3a%2f%2fessentiacounselling.com%2fwp-content%2fuploads%2f2015%2f07%2fbanner-home.png&ehk=CtgNk5vrh3WGN99UxZEQ%2fFTamdk%2bO96V7doH3r2fsi4%3d&risl=&pid=ImgRaw&r=0"
         />
-
+         <ParallaxLayer depth={0.50}>
+          <img
+            src="https://th.bing.com/th/id/R.1cd2609efd53ca505322de046c04b489?rik=1ZxEF215f6t%2bUQ&riu=http%3a%2f%2fessentiacounselling.com%2fwp-content%2fuploads%2f2015%2f07%2fbanner-home.png&ehk=CtgNk5vrh3WGN99UxZEQ%2fFTamdk%2bO96V7doH3r2fsi4%3d&risl=&pid=ImgRaw&r=0"
+            alt="sky"
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: -400,
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </ParallaxLayer>
         <ParallaxLayer depth={0.50}>
           <img
             src="https://static.vecteezy.com/system/resources/previews/011/222/157/non_2x/blue-sky-with-cloud-background-nature-vertical-free-png.png"
@@ -122,29 +148,33 @@ const App = () => {
 
        
 
-      {/* Blog Section */}
-      <div id="content">
-        <section className="blog-section">
-          <div className="blog-post">
-            <div className="left-column">
-              <div className="sculpture-container">
-                <img
-                  src="https://i.pinimg.com/originals/ae/6b/79/ae6b7988f9d7ba32191dae6db6e31127.png" // Replace with the actual path to your sculpture PNG
-                  alt="Sculpture"
-                  className="sculpture-image"
-                />
-              </div>
-            </div>
-            <div className="right-column">
-              <h2 className="blog-title">The Timeless Beauty of Greek Sculpture</h2>
-              <p className="blog-content">
-                The artistry of ancient Greek sculpture is a timeless treasure. It reflects the culture and ideals of a civilization
-                that still influences modern art to this day. The detailed sculptures capture the essence of human form, often conveying
-                emotions and stories through stone.
-              </p>
-            </div>
-          </div>
-        </section>
+      <section class="blog-section">
+  <div class="blog-post">
+    <div class="left-column">
+      <img src="https://i.pinimg.com/originals/ae/6b/79/ae6b7988f9d7ba32191dae6db6e31127.png" alt="Museum Image" class="blog-image" />
+    </div>
+    <div class="right-column">
+      <h2 class="blog-title">Explore Our Latest Exhibition</h2>
+      <div class="blog-content">
+        <p>
+          Discover the fascinating world of art, from ancient sculptures to modern masterpieces. Our museum
+          offers a unique journey through history.
+        </p>
+        <p>
+          In this exhibition, we highlight the works of renowned artists, such as <span>Michelangelo</span>, and
+          showcase rare artifacts that have shaped our understanding of culture.
+        </p>
+        <p>
+          Join us for a tour of the <span>Renaissance Art Collection</span>, an unforgettable experience that
+          will leave you with a deeper appreciation for the beauty and complexity of our world.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       {/* Architecture Section with Background Video */}
       <section className="architecture-section">
   <div className="video-container">
@@ -168,10 +198,31 @@ const App = () => {
     </p>
   </div>
 </section>
+<div className="main-content">
+  <section className="ending-section">
+    <div className="ending-content">
+      <h2 className="ending-title">Thank You for Visiting</h2>
+      <p className="ending-description">
+        We hope you enjoyed exploring the timeless beauty of art, culture, and history. 
+        Stay connected with us for more inspiring stories and artifacts.
+      </p>
+      <button className="cta-button">Subscribe for Updates</button>
+    </div>
+  </section>
+</div>
 
+<footer className="footer">
+  <p>&copy; 2024 Eternity in Elegance. All rights reserved.</p>
+  <p>
+    Follow us on:
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"> Facebook</a> | 
+    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"> Instagram</a> | 
+    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"> Twitter</a>
+  </p>
+</footer>
 
    
-      </div>
+      
     </>
   );
 };
