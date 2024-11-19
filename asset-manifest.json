@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MeghaYadav03/greek/static/css/main.ebf67700.css",
+    "main.js": "/MeghaYadav03/greek/static/js/main.93d9dada.js",
+    "static/js/453.93ea5476.chunk.js": "/MeghaYadav03/greek/static/js/453.93ea5476.chunk.js",
+    "static/media/2339301.jpg": "/MeghaYadav03/greek/static/media/2339301.08e386fa0d5ecde1e37c.jpg",
+    "index.html": "/MeghaYadav03/greek/index.html",
+    "main.ebf67700.css.map": "/MeghaYadav03/greek/static/css/main.ebf67700.css.map",
+    "main.93d9dada.js.map": "/MeghaYadav03/greek/static/js/main.93d9dada.js.map",
+    "453.93ea5476.chunk.js.map": "/MeghaYadav03/greek/static/js/453.93ea5476.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebf67700.css",
+    "static/js/main.93d9dada.js"
+  ]
+}
