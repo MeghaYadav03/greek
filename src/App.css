@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+:root {
+  --heroHeight: 800px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global Styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Hero Section */
+#hero {
+  height: var(--heroHeight);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Parallax Layers */
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: var(--heroHeight);
+  position: fixed;
+  z-index: -1;
+}
+
+/* GIF container for the GIF layer */
+.gif-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.first-section {
+  padding: 50px 0 20px 0;
+}
+
+h1 {
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #ede0d5;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  #hero {
+    display: none;
+  }
+
+  #content {
+    padding: 20px;
   }
 }
+/* Blog Section */
+/* Blog Section Styling */
+/* Blog Section Styling */
+.blog-section {
+  position: relative;
+  padding: 120px 8%; /* Increased padding for better spacing */
+  background-image: url('https://images.prismic.io/purcell/ODk3NzcxNTktYjBkYy00OWQxLTlkYTAtNjhlYWUyNTliMDg1_nhm-central-hall-2.jpg?auto=compress,format&rect=545,0,681,1181&w=1536&h=5200');
+  background-size: cover; /* Ensures the image covers the section, but doesn't distort */
+  background-position: center center; /* Focus on the center of the image */
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  color: #fff;
+  overflow: hidden;
+  border-radius:0px ; /* Softer rounded corners */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Darker overlay for the background */
+.blog-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  z-index: -1;
+}
+
+/* Blog Post Styling */
+.blog-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  background-color: rgba(22, 16, 16, 0.9); /* Slight transparency for a layered effect */
+  border-radius: px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  max-width: 1200px; /* Limit the width of the blog post */
+  margin: 0 auto; /* Center the blog post */
+  padding: 20px; /* Add padding to ensure no image or content is cramped */
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  height: auto; /* Keep the image's natural height */
+  max-height: 350px; /* Set a fixed max-height for image to ensure proportionality */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.4s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect on Image */
+.blog-post:hover .blog-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Right Column Styling */
+.right-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  padding-left: 20px; /* Less padding to reduce space */
+  position: relative;
+  max-width: 55%; /* Limit width of right column */
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+/* Left Column */
+.left-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 45%; /* Limit width of the left column */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Blog Title */
+.right-column .blog-title {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.3;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blog-title:hover {
+  color: #f0a500;
+}
+
+/* Blog Content */
+.blog-content {
+  font-size: 18px;
+  color: #f1e0c6;
+  line-height: 1.7;
+  font-family: 'Playfair Display', serif;
+  text-align: justify;
+  max-width: 90%;
+  transition: color 0.3s ease-in-out;
+}
+
+.blog-post:hover .blog-content {
+  color: #fff;
+}
+
+/* Add subtle animations to the blog title and content */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.blog-title, .blog-content {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.blog-post:nth-child(odd) .blog-title {
+  animation-delay: 0.3s;
+}
+
+.blog-post:nth-child(even) .blog-title {
+  animation-delay: 0.5s;
+}
+
+.blog-post:nth-child(odd) .blog-content {
+  animation-delay: 0.6s;
+}
+
+.blog-post:nth-child(even) .blog-content {
+  animation-delay: 0.8s;
+}
+
+/* Hover effect on the right column */
+.blog-post:hover .right-column {
+  transform: translateX(10px);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .blog-section {
+    padding: 80px 5%;
+  }
+
+  .blog-post {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .blog-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .blog-content {
+    font-size: 18px;
+  }
+}
+/* Architecture Section */
+.architecture-section {
+  position: relative;
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Prevents overflow from video */
+}
+
+/* Background Video */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Puts video behind text */
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+}
+
+/* Overlay Content */
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+/* Section Heading */
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Section Description */
+.section-description {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
 }
