@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './App.css'; // Include your CSS for styling
+import './App.css'; 
 
 const ParallaxLayer = ({ depth, backgroundImage, isGif, children }) => {
   return (
@@ -8,7 +8,7 @@ const ParallaxLayer = ({ depth, backgroundImage, isGif, children }) => {
       data-type="parallax"
       data-depth={depth}
       style={{
-        backgroundImage: isGif ? 'none' : `url(${backgroundImage})`, // Conditional background
+        backgroundImage: isGif ? 'none' : `url(${backgroundImage})`, 
       }}
     >
       {isGif && (
@@ -98,21 +98,23 @@ const App = () => {
   <p
     style={{
       position: 'absolute',
-      left: '27%',
-      bottom: '61%',
-      transform: 'translate(-50%, 50%)',
-      fontSize: '4.5em', // Reduced the font size
-      fontFamily: '"Playfair Display", serif', // Elegant serif font
-      fontWeight: '1200', // Bold weight for better emphasis
-      color: '#2e3d4f', // Darker grey-blue shade for more depth
-      textShadow: '1px 1px 1px rgba(0, 0, 0, 0.6)', // Slightly reduced shadow for a more subtle effect
-      letterSpacing: '0.04em', // Reduced letter spacing for a tighter appearance
-      zIndex: 10,
-      lineHeight: '1.2', // Ensures readability with better line height
-      textAlign: 'center', // Keeps the text centered
-      margin: 0,
-      padding: 0,
-      WebkitTextStroke: '0.1px white',
+    left: '27%',
+    bottom: '61%',
+    transform: 'translate(-50%, 50%)',
+    fontSize: '4.5em', 
+    fontFamily: '"Playfair Display", serif',
+    fontWeight: 'bold', 
+    color: '#2e3d4f', 
+    textShadow: `
+      1px 1px 2px rgba(0, 0, 0, 0.6), 
+      2px 2px 4px rgba(0, 0, 0, 0.4)`, 
+    letterSpacing: '0.04em', 
+    zIndex: 10,
+    lineHeight: '2', 
+    textAlign: 'center', 
+    margin: 0,
+    padding: 0,
+    WebkitTextStroke: '0.1px white', 
     }}
   >
     Eternity in Elegance

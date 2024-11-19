@@ -2,7 +2,6 @@
   --heroHeight: 800px;
 }
 
-/* Global Styles */
 body {
   padding: 0;
   margin: 0;
@@ -10,14 +9,14 @@ body {
   background-color: black;
 }
 
-/* Hero Section */
+/* Hero */
 #hero {
   height: var(--heroHeight);
   overflow: hidden;
   position: relative;
 }
 
-/* Parallax Layers */
+/* Parallax*/
 .layer {
   background-position: bottom center;
   background-size: auto;
@@ -28,15 +27,6 @@ body {
   z-index: -1;
 }
 
-/* GIF container for the GIF layer */
-.gif-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 
 .first-section {
   padding: 50px 0 20px 0;
@@ -55,62 +45,60 @@ p {
 
 /* Media Queries */
 @media only screen and (max-width: 1024px) {
-  /* Adjusting Hero Section for smaller screens */
   #hero {
-    height: 600px; /* Reduced height on smaller screens */
+    height: 600px; 
   }
 
   h1 {
-    font-size: 24px; /* Smaller font size for headers */
+    font-size: 24px;
     margin-bottom: 20px;
   }
 
   p {
-    font-size: 16px; /* Slightly smaller paragraph text */
+    font-size: 16px; 
   }
 }
 
 @media only screen and (max-width: 768px) {
-  /* Hide hero section on smaller screens */
+  
   #hero {
     display: none;
   }
 
-  /* Ensure content is not squished on small screens */
+ 
   #content {
     padding: 20px;
   }
 
   h1 {
-    font-size: 22px; /* Further adjust font size */
-    text-align: center; /* Center the heading */
+    font-size: 22px; 
+    text-align: center; 
   }
 
   p {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    line-height: 140%; /* Better readability on small screens */
+    font-size: 14px; 
+    line-height: 140%; 
   }
 
-  /* Adjust first section padding */
+ 
   .first-section {
-    padding: 30px 0; /* Less padding for mobile */
+    padding: 30px 0; 
   }
 }
 
-/* Mobile Adjustments (Optional) */
 @media only screen and (max-width: 480px) {
   h1 {
-    font-size: 18px; /* Further reduce font size on very small screens */
+    font-size: 18px; 
     text-align: center;
   }
 
   p {
-    font-size: 12px; /* Ensure text fits properly on very small screens */
+    font-size: 12px; 
   }
 }
 
   
-/* Blog Section Styling */
+/* Blog */
 .blog-section {
   position: relative;
   padding: 100px 5%;
@@ -127,7 +115,6 @@ p {
   min-height: 500px;
 }
 
-/* Darker Overlay for better contrast */
 .blog-section::after {
   content: '';
   position: absolute;
@@ -139,7 +126,6 @@ p {
   z-index: -1;
 }
 
-/* Blog Post Container */
 .blog-post {
   display: flex;
   justify-content: space-between;
@@ -156,13 +142,11 @@ p {
   width: 90%;
 }
 
-/* Hover Effect on Blog Post */
 .blog-post:hover {
   transform: scale(1.03);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Left Column (Image Section) */
 .left-column {
   width: 45%;
   padding-right: 20px;
@@ -176,12 +160,10 @@ p {
   transition: transform 0.4s ease-in-out;
 }
 
-/* Hover Effect on Image */
 .blog-post:hover .blog-image {
   transform: scale(1.1);
 }
 
-/* Right Column (Text Section) */
 .right-column {
   display: flex;
   flex-direction: column;
@@ -192,7 +174,6 @@ p {
   width: 55%;
 }
 
-/* Blog Title */
 .blog-title {
   font-size: 36px;
   color: #ffdd91;
@@ -209,7 +190,6 @@ p {
   color: #f4a261;
 }
 
-/* Blog Content */
 .blog-content {
   font-size: 18px;
   line-height: 1.7;
@@ -220,26 +200,23 @@ p {
   transition: color 0.3s ease;
 }
 
-/* Hover Effect on Blog Content */
 .blog-post:hover .blog-content {
   color: #ffffff;
 }
 
-/* Adding More Text */
 .blog-content p {
   margin-bottom: 15px;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 1024px) {
   .blog-section {
     padding: 80px 10%;
   }
 
   .blog-post {
-    flex-direction: column; /* Stack the columns */
+    flex-direction: column; 
     padding: 30px;
-    height: auto; /* Allow height to adjust based on content */
+    height: auto; 
   }
 
   .left-column {
@@ -250,23 +227,23 @@ p {
   .right-column {
     width: 100%;
     padding-left: 0;
-    text-align: center; /* Center the text for smaller screens */
+    text-align: center; 
   }
 
   .blog-title {
-    font-size: 28px; /* Adjust title font size */
-    text-align: center; /* Center the title */
+    font-size: 28px; 
+    text-align: center; 
   }
 
   .blog-content {
-    font-size: 16px; /* Adjust content font size */
-    text-align: left; /* Restore left alignment */
+    font-size: 16px; 
+    text-align: left; 
   }
 }
 
 @media only screen and (max-width: 768px) {
   .blog-section {
-    padding: 60px 5%; /* Reduce padding for smaller screens */
+    padding: 60px 5%;
   }
 
   .blog-post {
@@ -286,25 +263,25 @@ p {
   }
 
   .blog-title {
-    font-size: 24px; /* Further reduce font size for small screens */
+    font-size: 24px; 
   }
 
   .blog-content {
-    font-size: 14px; /* Smaller content font size */
+    font-size: 14px; 
   }
 }
 
 @media only screen and (max-width: 480px) {
   .blog-section {
-    padding: 40px 5%; /* Further reduce padding for very small screens */
+    padding: 40px 5%; 
   }
 
   .blog-title {
-    font-size: 20px; /* Smaller title font size */
+    font-size: 20px;
   }
 
   .blog-content {
-    font-size: 12px; /* Further reduce content font size */
+    font-size: 12px;
   }
 }
 
@@ -314,20 +291,19 @@ p {
 /* Architecture Section */
 .architecture-section {
   position: relative;
-  height: 100vh; /* Full height */
+  height: 100vh; 
   overflow: hidden;
   border-top: 20px solid #000;
   border-bottom: 20px solid #000;
 }
 
-/* Background Video */
 .video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts video behind text */
+  z-index: -1; 
 }
 
 .background-video {
@@ -336,7 +312,6 @@ p {
   object-fit: cover;
 }
 
-/* Overlay Content */
 .content-overlay {
   position: absolute;
   top: 50%;
@@ -347,7 +322,6 @@ p {
   z-index: 1;
 }
 
-/* Section Heading */
 .section-heading {
   font-family: 'Playfair Display', serif;
   font-size: 3.5em;
@@ -356,7 +330,6 @@ p {
   margin-bottom: 20px;
 }
 
-/* Section Description */
 .section-description {
   font-size: 1.5em;
   font-weight: 400;
@@ -366,66 +339,62 @@ p {
   margin: 0 auto;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 1024px) {
   .section-heading {
-    font-size: 3em; /* Reduce font size for smaller screens */
+    font-size: 3em; 
   }
 
   .section-description {
-    font-size: 1.2em; /* Slightly smaller description text */
-    max-width: 500px; /* Reduce max width for better fitting */
+    font-size: 1.2em; 
+    max-width: 500px; 
   }
+
 }
 
 @media only screen and (max-width: 768px) {
   .section-heading {
-    font-size: 2.5em; /* Further reduce heading font size */
+    font-size: 2.5em; 
   }
 
   .section-description {
-    font-size: 1.1em; /* Smaller description text */
-    max-width: 400px; /* Make description text fit better */
+    font-size: 1.1em; 
+    max-width: 400px; 
   }
 
-  /* Adjust video container height for smaller screens */
   .video-container {
-    height: 80vh; /* Reduce video height on small screens */
+    height: 80vh; 
   }
 }
 
 @media only screen and (max-width: 480px) {
   .section-heading {
-    font-size: 2em; /* Further reduce heading font size */
+    font-size: 2em; 
   }
 
   .section-description {
-    font-size: 1em; /* Reduce font size further for mobile screens */
-    max-width: 350px; /* Further reduce description width */
+    font-size: 1em; 
+    max-width: 350px; 
   }
-
-  /* Adjust video container height for mobile screens */
   .video-container {
-    height: 70vh; /* Even smaller video height on very small screens */
+    height: 70vh; 
   }
 }
 
 
 
-/* General body and layout */
+
 body, html {
-  height: 100%; /* Full height */
+  height: 100%; 
   margin: 0;
   font-family: 'Arial', sans-serif;
   display: flex;
-  flex-direction: column; /* Stack sections vertically */
+  flex-direction: column; 
 }
 
 .main-content {
-  flex: 1; /* Ensures content grows to take available space */
+  flex: 1; 
 }
 
-/* Ending Section Styling */
 .ending-section {
   background-image: url('./assets/images/2339301.jpg');
   background-size: cover;
@@ -437,7 +406,6 @@ body, html {
   position: relative;
 }
 
-/* Darker overlay for text contrast */
 .ending-section::after {
   content: '';
   position: absolute;
@@ -469,7 +437,6 @@ body, html {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Call to Action Button */
 .cta-button {
   background-color: #a49d93;
   color: #1a1a1a;
@@ -488,7 +455,7 @@ body, html {
   transform: translateY(-2px);
 }
 
-/* Footer Styling */
+/* Footer  */
 .footer {
   font-size: 1rem;
   color: #ccc;
@@ -576,7 +543,6 @@ body, html {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
@@ -586,21 +552,19 @@ body, html {
     font-size: 1.4rem;
   }
 
-  /* Ending Section Adjustments */
   .ending-title {
-    font-size: 2rem; /* Smaller font size on mobile */
+    font-size: 2rem; 
   }
 
   .ending-description {
-    font-size: 1rem; /* Slightly smaller description font size */
+    font-size: 1rem; 
   }
 
   .cta-button {
-    padding: 10px 20px; /* Adjust button size */
+    padding: 10px 20px;
     font-size: 1rem;
   }
 
-  /* Adjust footer padding */
   .footer {
     padding: 10px 0;
   }
@@ -608,20 +572,20 @@ body, html {
 
 @media (max-width: 480px) {
   .ending-title {
-    font-size: 1.8rem; /* Further reduce title font size on very small screens */
+    font-size: 1.8rem; 
   }
 
   .ending-description {
-    font-size: 0.9rem; /* Further reduce description font size */
+    font-size: 0.9rem; 
   }
 
   .cta-button {
     padding: 8px 15px;
-    font-size: 0.9rem; /* Smaller button text on mobile */
+    font-size: 0.9rem; 
   }
 
   .footer {
-    padding: 8px 0; /* Reduce footer padding */
+    padding: 8px 0; 
   }
 }
 
